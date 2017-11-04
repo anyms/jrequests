@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jRequests</title>
+</head>
+<body>
+
+
+<script src="jrequests.js"></script>
+<script>
+
+    var requests = new JRequests();
+    requests.post(function (res) {
+        console.log(res.json());
+    }, "http://httpbin.org/post", {"name": "jeeva", "age": 22, "another": "value"}, {"Name": "Jeeva"});
+
+</script>
+</body>
+</html>
